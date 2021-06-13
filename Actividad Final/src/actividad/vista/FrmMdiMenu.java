@@ -16,6 +16,7 @@ public class FrmMdiMenu extends javax.swing.JFrame {
      */
     public FrmMdiMenu() {
         initComponents();
+        
     }
 
     /**
@@ -27,85 +28,72 @@ public class FrmMdiMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        desktopPane = new javax.swing.JDesktopPane();
+        jopMensaje = new javax.swing.JOptionPane();
+        jdkpConetenedor = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
-        fileMenu = new javax.swing.JMenu();
-        openMenuItem = new javax.swing.JMenuItem();
-        saveMenuItem = new javax.swing.JMenuItem();
-        saveAsMenuItem = new javax.swing.JMenuItem();
-        exitMenuItem = new javax.swing.JMenuItem();
-        editMenu = new javax.swing.JMenu();
-        cutMenuItem = new javax.swing.JMenuItem();
-        copyMenuItem = new javax.swing.JMenuItem();
-        pasteMenuItem = new javax.swing.JMenuItem();
-        deleteMenuItem = new javax.swing.JMenuItem();
-        helpMenu = new javax.swing.JMenu();
-        contentMenuItem = new javax.swing.JMenuItem();
-        aboutMenuItem = new javax.swing.JMenuItem();
+        jfmnArchivo = new javax.swing.JMenu();
+        jmniAdministrador = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jmniPrincipiante = new javax.swing.JMenuItem();
+        jmeiIntermedio = new javax.swing.JMenuItem();
+        jmniAvanzado = new javax.swing.JMenuItem();
+        jmniReporte = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jmniSalir = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jmniAcerca = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        fileMenu.setMnemonic('f');
-        fileMenu.setText("File");
+        jdkpConetenedor.setBackground(new java.awt.Color(255, 255, 255));
 
-        openMenuItem.setMnemonic('o');
-        openMenuItem.setText("Open");
-        fileMenu.add(openMenuItem);
+        jfmnArchivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actividad/img/menu_1.png"))); // NOI18N
+        jfmnArchivo.setMnemonic('f');
+        jfmnArchivo.setText("Archivo");
 
-        saveMenuItem.setMnemonic('s');
-        saveMenuItem.setText("Save");
-        fileMenu.add(saveMenuItem);
+        jmniAdministrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actividad/img/ic_configuraciones_color.png"))); // NOI18N
+        jmniAdministrador.setMnemonic('o');
+        jmniAdministrador.setText("Administrador");
+        jfmnArchivo.add(jmniAdministrador);
 
-        saveAsMenuItem.setMnemonic('a');
-        saveAsMenuItem.setText("Save As ...");
-        saveAsMenuItem.setDisplayedMnemonicIndex(5);
-        fileMenu.add(saveAsMenuItem);
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actividad/img/ic_rompecabezas.png"))); // NOI18N
+        jMenu1.setText("Juego");
 
-        exitMenuItem.setMnemonic('x');
-        exitMenuItem.setText("Exit");
-        exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitMenuItemActionPerformed(evt);
-            }
-        });
-        fileMenu.add(exitMenuItem);
+        jmniPrincipiante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actividad/img/ic_bronze-medal_pri.png"))); // NOI18N
+        jmniPrincipiante.setText("Principiante");
+        jMenu1.add(jmniPrincipiante);
 
-        menuBar.add(fileMenu);
+        jmeiIntermedio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actividad/img/ic_silver-medal_int.png"))); // NOI18N
+        jmeiIntermedio.setText("Intermedio");
+        jMenu1.add(jmeiIntermedio);
 
-        editMenu.setMnemonic('e');
-        editMenu.setText("Edit");
+        jmniAvanzado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actividad/img/ic_gold-medal_adc.png"))); // NOI18N
+        jmniAvanzado.setText("Avanzado");
+        jMenu1.add(jmniAvanzado);
 
-        cutMenuItem.setMnemonic('t');
-        cutMenuItem.setText("Cut");
-        editMenu.add(cutMenuItem);
+        jfmnArchivo.add(jMenu1);
 
-        copyMenuItem.setMnemonic('y');
-        copyMenuItem.setText("Copy");
-        editMenu.add(copyMenuItem);
+        jmniReporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actividad/img/ic_reporte.png"))); // NOI18N
+        jmniReporte.setText("Reporte Resulados");
+        jfmnArchivo.add(jmniReporte);
+        jfmnArchivo.add(jSeparator1);
 
-        pasteMenuItem.setMnemonic('p');
-        pasteMenuItem.setText("Paste");
-        editMenu.add(pasteMenuItem);
+        jmniSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actividad/img/ic_exit.png"))); // NOI18N
+        jmniSalir.setMnemonic('x');
+        jmniSalir.setText("Exit");
+        jfmnArchivo.add(jmniSalir);
 
-        deleteMenuItem.setMnemonic('d');
-        deleteMenuItem.setText("Delete");
-        editMenu.add(deleteMenuItem);
+        menuBar.add(jfmnArchivo);
 
-        menuBar.add(editMenu);
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actividad/img/ic_ayuda.png"))); // NOI18N
+        jMenu2.setText("Ayuda");
 
-        helpMenu.setMnemonic('h');
-        helpMenu.setText("Help");
+        jmniAcerca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actividad/img/ic_acerca.png"))); // NOI18N
+        jmniAcerca.setText("Acerca de..");
+        jMenu2.add(jmniAcerca);
 
-        contentMenuItem.setMnemonic('c');
-        contentMenuItem.setText("Contents");
-        helpMenu.add(contentMenuItem);
-
-        aboutMenuItem.setMnemonic('a');
-        aboutMenuItem.setText("About");
-        helpMenu.add(aboutMenuItem);
-
-        menuBar.add(helpMenu);
+        menuBar.add(jMenu2);
 
         setJMenuBar(menuBar);
 
@@ -113,19 +101,15 @@ public class FrmMdiMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 747, Short.MAX_VALUE)
+            .addComponent(jdkpConetenedor, javax.swing.GroupLayout.DEFAULT_SIZE, 747, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+            .addComponent(jdkpConetenedor, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_exitMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,21 +147,20 @@ public class FrmMdiMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem aboutMenuItem;
-    private javax.swing.JMenuItem contentMenuItem;
-    private javax.swing.JMenuItem copyMenuItem;
-    private javax.swing.JMenuItem cutMenuItem;
-    private javax.swing.JMenuItem deleteMenuItem;
-    private javax.swing.JDesktopPane desktopPane;
-    private javax.swing.JMenu editMenu;
-    private javax.swing.JMenuItem exitMenuItem;
-    private javax.swing.JMenu fileMenu;
-    private javax.swing.JMenu helpMenu;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    public javax.swing.JDesktopPane jdkpConetenedor;
+    private javax.swing.JMenu jfmnArchivo;
+    public javax.swing.JMenuItem jmeiIntermedio;
+    public javax.swing.JMenuItem jmniAcerca;
+    public javax.swing.JMenuItem jmniAdministrador;
+    public javax.swing.JMenuItem jmniAvanzado;
+    public javax.swing.JMenuItem jmniPrincipiante;
+    public javax.swing.JMenuItem jmniReporte;
+    public javax.swing.JMenuItem jmniSalir;
+    public javax.swing.JOptionPane jopMensaje;
     private javax.swing.JMenuBar menuBar;
-    private javax.swing.JMenuItem openMenuItem;
-    private javax.swing.JMenuItem pasteMenuItem;
-    private javax.swing.JMenuItem saveAsMenuItem;
-    private javax.swing.JMenuItem saveMenuItem;
     // End of variables declaration//GEN-END:variables
 
 }
