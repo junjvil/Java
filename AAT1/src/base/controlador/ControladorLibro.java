@@ -9,7 +9,9 @@ import base.modelo.AutorLibroVO;
 import base.modelo.AutorVO;
 import base.modelo.LibroDAO;
 import base.modelo.LibroVO;
+import base.vista.FrmAutores;
 import base.vista.FrmLibros;
+import base.vista.FrmMenu;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
@@ -23,6 +25,8 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ControladorLibro implements MouseListener,InternalFrameListener{
     //declaracion de objectos 
+    
+    
     FrmLibros viewLibro=new FrmLibros();
     LibroVO lvo=new LibroVO();
     LibroDAO ldao=new LibroDAO();
@@ -41,6 +45,7 @@ public class ControladorLibro implements MouseListener,InternalFrameListener{
         
         this.viewLibro.addInternalFrameListener(this); 
         viewLibro.jbtnInsertar.addMouseListener(this);
+        viewLibro.jcbxAutores.addMouseListener(this);
     }// fin del constructor de la clase 
     
     /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -119,7 +124,7 @@ public class ControladorLibro implements MouseListener,InternalFrameListener{
       -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/      
     public void datosAutor(){
         viewLibro.jcbxAutores.addItem("");
-        viewLibro.jcbxAutores.addItem("No Existe..");
+        viewLibro.jcbxAutores.addItem("No Existe");
         for(AutorVO avo:ldao.cargarAutores()){
             viewLibro.jcbxAutores.addItem(avo.getNombre()+" "+avo.getApellido());
         }        
@@ -142,8 +147,20 @@ public class ControladorLibro implements MouseListener,InternalFrameListener{
             this.clean();            
         }// fin de la operacion del boton insertar
         
+        // no existe el autor
+        if(e.getSource().equals(viewLibro.jcbxAutores)){
+            FrmMenu viewPrincipal=new FrmMenu();
+            FrmAutores viewAutor=new FrmAutores();
+            
+            switch((String)this.viewLibro.jcbxAutores.getSelectedItem()){
+                case "":
+                    System.out.println("ingreseo a la tmoma de diccion");
+                    break;
+            }// fin de la seleccion multiple
+        }//llamado al formulario de autor
         
-    }
+        
+    }   
 
     @Override
     public void mousePressed(MouseEvent e) {
