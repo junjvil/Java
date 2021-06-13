@@ -5,6 +5,8 @@
  */
 package actividad;
 
+import actividad.vista.FrmLogin;
+
 /**
  *
  * @author HP
@@ -16,6 +18,8 @@ public class ActividadFinal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        FrmLogin viewLog=new FrmLogin();
+        viewLog.setVisible(true);
     }
     
 }
